@@ -1,0 +1,95 @@
+{
+  "need_generate_pdf": false,
+  "need_generate_intellisense": false,
+  "docsets_to_publish": [
+    {
+      "docset_name": "openpublishing-test-docs",
+      "build_source_folder": "openpublishing/test",
+      "build_output_subfolder": "openpublishing/test-docs",
+      "locale": "ja-jp",
+      "version": 0,
+      "open_to_public_contributors": false,
+      "type_mapping": {
+        "Conceptual": "Content",
+        "ManagedReference": "Content",
+        "RestApi": "Content"
+      },
+      "build_entry_point": "docs",
+      "template_folder": "_themes"
+    },
+    {
+      "docset_name": "openpublishing-test-op",
+      "build_source_folder": "openpublishing/test",
+      "build_output_subfolder": "openpublishing/test-op-technet",
+      "locale": "ja-jp",
+      "version": 0,
+      "open_to_public_contributors": false,
+      "type_mapping": {
+        "Conceptual": "Content",
+        "ManagedReference": "Content",
+        "RestApi": "Content"
+      },
+      "build_entry_point": "op"
+    },
+    {
+      "docset_name": "openpublishing-test-op-technet",
+      "build_source_folder": "openpublishing/test",
+      "build_output_subfolder": "openpublishing/test-op",
+      "locale": "ja-jp",
+      "version": 0,
+      "open_to_public_contributors": false,
+      "type_mapping": {
+        "Conceptual": "Content",
+        "ManagedReference": "Content",
+        "RestApi": "Content"
+      },
+      "build_entry_point": "op"
+    },
+    {
+      "docset_name": "openpublishing-test-static-vscom",
+      "build_source_folder": "openpublishing/test",
+      "build_output_subfolder": "openpublishing/test",
+      "locale": "ja-jp",
+      "version": 0,
+      "open_to_public_contributors": true,
+      "type_mapping": {
+        "Conceptual": "Content",
+        "ManagedReference": "Content",
+        "RestApi": "Content"
+      },
+      "build_entry_point": "docs",
+      "template_folder": "_themes.VS.Modern"
+    }
+  ],
+  "notification_subscribers": [
+    "opbuild@microsoft.com"
+  ],
+  "branches_to_filter": [],
+  "skip_source_output_uploading": false,
+  "dependent_repositories": [
+    {
+      "path_to_root": "_themes",
+      "url": "https://github.com/Microsoft/templates.docs.msft.ja-jp",
+      "branch": "master",
+      "branch_mapping": {
+        "develop_e2e": "develop",
+        "release_e2e": "release",
+        "hotfix_e2e": "hotfix",
+        "docs_develop_e2e": "ops_develop",
+        "docs_release_e2e": "ops_release",
+        "docs_hotfix_e2e": "ops_hotfix"
+      }
+    },
+    {
+      "path_to_root": "_themes.VS.Modern",
+      "url": "https://github.com/Microsoft/templates.vs.com.ja-jp",
+      "branch": "master",
+      "branch_mapping": {
+        "master": "develop",
+        "vscom_develop_e2e": "develop",
+        "vscom_release_e2e": "release",
+        "vscom_hotfix_e2e": "hotfix"
+      }
+    }
+  ]
+}
